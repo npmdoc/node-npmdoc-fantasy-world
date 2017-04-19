@@ -1,0 +1,5861 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/SimonRichardson/fantasy-world">fantasy-world (v0.0.8)</a>
+</h1>
+<h4>Collection of common algebraic structures in JavaScript using Fantasy-Land.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world">module fantasy-world</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Cofree">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Cofree
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Either
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Left">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Either.Left
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Right">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Either.Right
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.IO">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>IO
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Identity">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Identity
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Lens
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Option
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.Some">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Option.Some
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.PartialLens">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>PartialLens
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Promise">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Promise
+            <span class="apidocSignatureSpan">(fork)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Reader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>State
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Store">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Store
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple2">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple2
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple3">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple4">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple5">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple5
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Validation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Failure">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Validation.Failure
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Success">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Validation.Success
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.apply">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>apply
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.bind">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>bind
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.compose">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>compose
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.constant">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>constant
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.create">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>create
+            <span class="apidocSignatureSpan">(proto)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.curry">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>curry
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.envAppend">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>envAppend
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.envConcat">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>envConcat
+            <span class="apidocSignatureSpan">(extraMethods, extraProperties)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.environment">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>environment
+            <span class="apidocSignatureSpan">(methods, properties)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.extend">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>extend
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.fix">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>fix
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.flip">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>flip
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.functionLength">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>functionLength
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.functionName">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>functionName
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.getInstance">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>getInstance
+            <span class="apidocSignatureSpan">(self, constructor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.identity">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>identity
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isArray">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isArray
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isBoolean">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isBoolean
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isFunction">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isFunction
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isInstanceOf">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isInstanceOf
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isNumber">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isNumber
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isObject">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isObject
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isString">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isString
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.isTypeOf">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>isTypeOf
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.method">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>method
+            <span class="apidocSignatureSpan">(name, predicate, f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.oneOf">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>oneOf
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.property">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>property
+            <span class="apidocSignatureSpan">(name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.randomRange">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>randomRange
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.singleton">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>singleton
+            <span class="apidocSignatureSpan">(k, v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.strictEquals">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>strictEquals
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.substitution">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>substitution
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.tagged">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>tagged
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.taggedSum">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>taggedSum
+            <span class="apidocSignatureSpan">(constructors)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.thrush">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>thrush
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Cofree.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Either.Left.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Either.Right.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Either.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>IO.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Identity.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Lens.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Option.None</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Option.Some.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Option.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>PartialLens.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Promise.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Reader.ask</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Reader.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>State.get</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>State.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Store.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Tuple2.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Tuple3.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Tuple4.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Tuple5.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Validation.Failure.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Validation.Success.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.</span>Validation.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Cofree">module fantasy-world.Cofree</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Cofree.Cofree">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Cofree
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Cofree.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Cofree.prototype">module fantasy-world.Cofree.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Cofree.prototype.extend">
+            function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>extend
+            <span class="apidocSignatureSpan">(g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Cofree.prototype.extract">
+            function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>extract
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Cofree.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>map
+            <span class="apidocSignatureSpan">(g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Cofree.prototype.traverse">
+            function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>traverse
+            <span class="apidocSignatureSpan">(g, p)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Either">module fantasy-world.Either</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Either">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Either
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.EitherT">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.</span>EitherT
+            <span class="apidocSignatureSpan">(M)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Left">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Left
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Right">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Right
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.of">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.</span>of
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Either.Left">module fantasy-world.Either.Left</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Left.Left">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Left
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Either.Left.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Either.Left.prototype">module fantasy-world.Either.Left.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Left.prototype.cata">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.Left.prototype.</span>cata
+            <span class="apidocSignatureSpan">(dispatches)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Either.Right">module fantasy-world.Either.Right</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Right.Right">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Right
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Either.Right.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Either.Right.prototype">module fantasy-world.Either.Right.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.Right.prototype.cata">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.Right.prototype.</span>cata
+            <span class="apidocSignatureSpan">(dispatches)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Either.prototype">module fantasy-world.Either.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.ap">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>ap
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.bimap">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>bimap
+            <span class="apidocSignatureSpan">(f, g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.chain">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>chain
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.concat">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>concat
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.fold">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>fold
+            <span class="apidocSignatureSpan">(f, g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.sequence">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>sequence
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.swap">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>swap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Either.prototype.traverse">
+            function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>traverse
+            <span class="apidocSignatureSpan">(f, p)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.IO">module fantasy-world.IO</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.IO.IO">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>IO
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.IO.of">
+            function <span class="apidocSignatureSpan">fantasy-world.IO.</span>of
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.IO.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.IO.prototype">module fantasy-world.IO.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.IO.prototype.ap">
+            function <span class="apidocSignatureSpan">fantasy-world.IO.prototype.</span>ap
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.IO.prototype.chain">
+            function <span class="apidocSignatureSpan">fantasy-world.IO.prototype.</span>chain
+            <span class="apidocSignatureSpan">(g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.IO.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.IO.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Identity">module fantasy-world.Identity</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Identity.Identity">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Identity
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Identity.of">
+            function <span class="apidocSignatureSpan">fantasy-world.Identity.</span>of
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Identity.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Identity.prototype">module fantasy-world.Identity.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Identity.prototype.ap">
+            function <span class="apidocSignatureSpan">fantasy-world.Identity.prototype.</span>ap
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Identity.prototype.chain">
+            function <span class="apidocSignatureSpan">fantasy-world.Identity.prototype.</span>chain
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Identity.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Identity.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Lens">module fantasy-world.Lens</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens.Lens">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Lens
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens.arrayLens">
+            function <span class="apidocSignatureSpan">fantasy-world.Lens.</span>arrayLens
+            <span class="apidocSignatureSpan">(index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens.id">
+            function <span class="apidocSignatureSpan">fantasy-world.Lens.</span>id
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens.objectLens">
+            function <span class="apidocSignatureSpan">fantasy-world.Lens.</span>objectLens
+            <span class="apidocSignatureSpan">(property)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Lens.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Lens.prototype">module fantasy-world.Lens.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens.prototype.andThen">
+            function <span class="apidocSignatureSpan">fantasy-world.Lens.prototype.</span>andThen
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens.prototype.compose">
+            function <span class="apidocSignatureSpan">fantasy-world.Lens.prototype.</span>compose
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Lens.prototype.toPartial">
+            function <span class="apidocSignatureSpan">fantasy-world.Lens.prototype.</span>toPartial
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Option">module fantasy-world.Option</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.Option">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Option
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.Some">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.</span>Some
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.of">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.</span>of
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.Option.</span>None</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Option.None">module fantasy-world.Option.None</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.None.cata">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.None.</span>cata
+            <span class="apidocSignatureSpan">(dispatches)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Option.Some">module fantasy-world.Option.Some</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.Some.Some">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.</span>Some
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Option.Some.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Option.Some.prototype">module fantasy-world.Option.Some.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.Some.prototype.cata">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.Some.prototype.</span>cata
+            <span class="apidocSignatureSpan">(dispatches)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Option.prototype">module fantasy-world.Option.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.prototype.ap">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>ap
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.prototype.chain">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>chain
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.prototype.concat">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>concat
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.prototype.fold">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>fold
+            <span class="apidocSignatureSpan">(f, g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.prototype.getOrElse">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>getOrElse
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Option.prototype.orElse">
+            function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>orElse
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.PartialLens">module fantasy-world.PartialLens</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.PartialLens.PartialLens">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>PartialLens
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.PartialLens.arrayLens">
+            function <span class="apidocSignatureSpan">fantasy-world.PartialLens.</span>arrayLens
+            <span class="apidocSignatureSpan">(index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.PartialLens.id">
+            function <span class="apidocSignatureSpan">fantasy-world.PartialLens.</span>id
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.PartialLens.objectLens">
+            function <span class="apidocSignatureSpan">fantasy-world.PartialLens.</span>objectLens
+            <span class="apidocSignatureSpan">(property)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.PartialLens.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.PartialLens.prototype">module fantasy-world.PartialLens.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.PartialLens.prototype.andThen">
+            function <span class="apidocSignatureSpan">fantasy-world.PartialLens.prototype.</span>andThen
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.PartialLens.prototype.compose">
+            function <span class="apidocSignatureSpan">fantasy-world.PartialLens.prototype.</span>compose
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Promise">module fantasy-world.Promise</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Promise.Promise">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Promise
+            <span class="apidocSignatureSpan">(fork)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Promise.of">
+            function <span class="apidocSignatureSpan">fantasy-world.Promise.</span>of
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Promise.prototype">module fantasy-world.Promise.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Promise.prototype.chain">
+            function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>chain
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Promise.prototype.extend">
+            function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>extend
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Promise.prototype.extract">
+            function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>extract
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Promise.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Reader">module fantasy-world.Reader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader.Reader">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Reader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader.ReaderT">
+            function <span class="apidocSignatureSpan">fantasy-world.Reader.</span>ReaderT
+            <span class="apidocSignatureSpan">(M)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader.of">
+            function <span class="apidocSignatureSpan">fantasy-world.Reader.</span>of
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Reader.</span>_length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.Reader.</span>ask</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Reader.ask">module fantasy-world.Reader.ask</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader.ask.run">
+            function <span class="apidocSignatureSpan">fantasy-world.Reader.ask.</span>run
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Reader.prototype">module fantasy-world.Reader.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader.prototype.ap">
+            function <span class="apidocSignatureSpan">fantasy-world.Reader.prototype.</span>ap
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader.prototype.chain">
+            function <span class="apidocSignatureSpan">fantasy-world.Reader.prototype.</span>chain
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Reader.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Reader.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.State">module fantasy-world.State</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.State">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>State
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.StateT">
+            function <span class="apidocSignatureSpan">fantasy-world.State.</span>StateT
+            <span class="apidocSignatureSpan">(M)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.modify">
+            function <span class="apidocSignatureSpan">fantasy-world.State.</span>modify
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.of">
+            function <span class="apidocSignatureSpan">fantasy-world.State.</span>of
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.put">
+            function <span class="apidocSignatureSpan">fantasy-world.State.</span>put
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.State.</span>_length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-world.State.</span>get</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.State.get">module fantasy-world.State.get</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.get.run">
+            function <span class="apidocSignatureSpan">fantasy-world.State.get.</span>run
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.State.prototype">module fantasy-world.State.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.prototype.ap">
+            function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>ap
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.prototype.chain">
+            function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>chain
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.prototype.evalState">
+            function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>evalState
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.prototype.exec">
+            function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>exec
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.State.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Store">module fantasy-world.Store</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Store.Store">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Store
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Store.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Store.prototype">module fantasy-world.Store.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Store.prototype.extend">
+            function <span class="apidocSignatureSpan">fantasy-world.Store.prototype.</span>extend
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Store.prototype.extract">
+            function <span class="apidocSignatureSpan">fantasy-world.Store.prototype.</span>extract
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Store.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Store.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple2">module fantasy-world.Tuple2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple2.Tuple2">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple2
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Tuple2.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple2.prototype">module fantasy-world.Tuple2.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple2.prototype.concat">
+            function <span class="apidocSignatureSpan">fantasy-world.Tuple2.prototype.</span>concat
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple3">module fantasy-world.Tuple3</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple3.Tuple3">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Tuple3.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple3.prototype">module fantasy-world.Tuple3.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple3.prototype.concat">
+            function <span class="apidocSignatureSpan">fantasy-world.Tuple3.prototype.</span>concat
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple4">module fantasy-world.Tuple4</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple4.Tuple4">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Tuple4.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple4.prototype">module fantasy-world.Tuple4.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple4.prototype.concat">
+            function <span class="apidocSignatureSpan">fantasy-world.Tuple4.prototype.</span>concat
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple5">module fantasy-world.Tuple5</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple5.Tuple5">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple5
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Tuple5.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Tuple5.prototype">module fantasy-world.Tuple5.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Tuple5.prototype.concat">
+            function <span class="apidocSignatureSpan">fantasy-world.Tuple5.prototype.</span>concat
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Validation">module fantasy-world.Validation</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Validation">
+            function <span class="apidocSignatureSpan">fantasy-world.</span>Validation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Failure">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Failure
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Success">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Success
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.of">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>of
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Validation.Failure">module fantasy-world.Validation.Failure</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Failure.Failure">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Failure
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Validation.Failure.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Validation.Failure.prototype">module fantasy-world.Validation.Failure.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Failure.prototype.cata">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.Failure.prototype.</span>cata
+            <span class="apidocSignatureSpan">(dispatches)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Validation.Success">module fantasy-world.Validation.Success</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Success.Success">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Success
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-world.Validation.Success.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Validation.Success.prototype">module fantasy-world.Validation.Success.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.Success.prototype.cata">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.Success.prototype.</span>cata
+            <span class="apidocSignatureSpan">(dispatches)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-world.Validation.prototype">module fantasy-world.Validation.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.prototype.ap">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>ap
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.prototype.bimap">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>bimap
+            <span class="apidocSignatureSpan">(f, g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.prototype.concat">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>concat
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.prototype.fold">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>fold
+            <span class="apidocSignatureSpan">(f, g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-world.Validation.prototype.map">
+            function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>map
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world" id="apidoc.module.fantasy-world">module fantasy-world</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Cofree" id="apidoc.element.fantasy-world.Cofree">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Cofree
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either" id="apidoc.element.fantasy-world.Either">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Either
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definitions() {
+    throw new TypeError('Tagged sum was called instead of one of its properties.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Left" id="apidoc.element.fantasy-world.Either.Left">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Either.Left
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Right" id="apidoc.element.fantasy-world.Either.Right">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Either.Right
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.IO" id="apidoc.element.fantasy-world.IO">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>IO
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Identity" id="apidoc.element.fantasy-world.Identity">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Identity
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens" id="apidoc.element.fantasy-world.Lens">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Lens
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option" id="apidoc.element.fantasy-world.Option">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Option
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definitions() {
+    throw new TypeError('Tagged sum was called instead of one of its properties.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.Some" id="apidoc.element.fantasy-world.Option.Some">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Option.Some
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.PartialLens" id="apidoc.element.fantasy-world.PartialLens">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>PartialLens
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Promise" id="apidoc.element.fantasy-world.Promise">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Promise
+        <span class="apidocSignatureSpan">(fork)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(fork) {
+    this.fork = fork;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader" id="apidoc.element.fantasy-world.Reader">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Reader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State" id="apidoc.element.fantasy-world.State">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>State
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Store" id="apidoc.element.fantasy-world.Store">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Store
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple2" id="apidoc.element.fantasy-world.Tuple2">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple2
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple3" id="apidoc.element.fantasy-world.Tuple3">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple4" id="apidoc.element.fantasy-world.Tuple4">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple5" id="apidoc.element.fantasy-world.Tuple5">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple5
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation" id="apidoc.element.fantasy-world.Validation">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Validation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definitions() {
+    throw new TypeError('Tagged sum was called instead of one of its properties.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Failure" id="apidoc.element.fantasy-world.Validation.Failure">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Validation.Failure
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Success" id="apidoc.element.fantasy-world.Validation.Success">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Validation.Success
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.apply" id="apidoc.element.fantasy-world.apply">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>apply
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function apply(f) {
+    return function(x) {
+        return f(x);
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.bind" id="apidoc.element.fantasy-world.bind">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>bind
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bind(f) {
+    function curriedBind(o) {
+<span class="apidocCodeCommentSpan">        /* If native bind doesn't exist, use a polyfill. */
+</span>        var args = [].slice.call(arguments, 1),
+            g;
+
+        if(f.bind) g = f.bind.apply(f, [o].concat(args));
+        else {
+            g = function() {
+                return f.apply(o, args.concat([].slice.call(arguments)));
+            };
+        }
+
+        /*
+           Let's try and associate all curried functions with the same name as the originator.
+           Can't override length but can set _length for currying
+        */
+        g._name = functionName(f);
+        g._length = Math.max(functionLength(f) - args.length, 0);
+
+        return g;
+    }
+
+    /* Manual currying since `curry` relies in bind. */
+    if(arguments.length &gt; 1) return curriedBind.apply(this, [].slice.call(arguments, 1));
+    else return curriedBind;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.compose" id="apidoc.element.fantasy-world.compose">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>compose
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compose(f) {
+    return function(g) {
+        return function(x) {
+            return f(g(x));
+        };
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.constant" id="apidoc.element.fantasy-world.constant">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>constant
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function constant(a) {
+    return function(b) {
+        return a;
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.create" id="apidoc.element.fantasy-world.create">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>create
+        <span class="apidocSignatureSpan">(proto)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(proto) {
+    function Ctor() {}
+    Ctor.prototype = proto;
+    return new Ctor();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.curry" id="apidoc.element.fantasy-world.curry">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>curry
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function curry(f) {
+    var a = function() {
+        var g = bind(f).apply(f, [this].concat([].slice.call(arguments)));
+
+        if(!functionLength(g)) return g();
+        else return curry(g);
+    };
+
+<span class="apidocCodeCommentSpan">    /*
+       Let's try and associate all curried functions with the same name as the originator.
+       Can't override length but can set _length for currying
+    */
+</span>    a._name = functionName(f);
+    a._length = functionLength(f);
+
+    return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.envAppend" id="apidoc.element.fantasy-world.envAppend">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>envAppend
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">envAppend = function (e) {
+    return e.envConcat(methods, properties);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.envConcat" id="apidoc.element.fantasy-world.envConcat">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>envConcat
+        <span class="apidocSignatureSpan">(extraMethods, extraProperties)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">envConcat = function (extraMethods, extraProperties) {
+    var newMethods = {},
+        possibleMethods;
+
+    for(var i in methods) {
+        possibleMethods = extraMethods[i] || [];
+        newMethods[i] = methods[i].concat(possibleMethods);
+    }
+    for(var j in extraMethods) {
+        if(j in newMethods) continue;
+        newMethods[j] = extraMethods[j];
+    }
+
+    return environment(
+        newMethods,
+        extend(properties, extraProperties)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	tuples = require('fantasy-tuples'),
+	cofrees = require('fantasy-cofrees'),
+	readers = require('fantasy-readers'),
+	stores = require('fantasy-stores'),
+	lenses = require('fantasy-lenses'),
+	fantasy = environment();
+
+fantasy = fantasy.<span class="apidocCodeKeywordSpan">envConcat</span>({}, helpers)
+	
+	//
+	//  ## Environment
+	//
+	.property('environment', environment)
+
+	//
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.environment" id="apidoc.element.fantasy-world.environment">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>environment
+        <span class="apidocSignatureSpan">(methods, properties)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function environment(methods, properties) {
+    var self = this instanceof environment &amp;&amp; !this.method &amp;&amp; !this.property ? this : create(environment.prototype),
+        method;
+
+    methods = methods || {};
+    properties = properties || {};
+
+    self.method = function(name, predicate, f) {
+        if(properties[name]) throw new Error("Method `" + name + "` is already in environment.");
+
+        var newMethods = extend(methods, singleton(name, (methods[name] || []).concat({
+            predicate: predicate,
+            f: f
+        })));
+        return environment(newMethods, properties);
+    };
+
+    self.property = function(name, value) {
+        var newProperties = extend(properties, singleton(name, value));
+        return environment(methods, newProperties);
+    };
+
+    self.envConcat = function(extraMethods, extraProperties) {
+        var newMethods = {},
+            possibleMethods;
+
+        for(var i in methods) {
+            possibleMethods = extraMethods[i] || [];
+            newMethods[i] = methods[i].concat(possibleMethods);
+        }
+        for(var j in extraMethods) {
+            if(j in newMethods) continue;
+            newMethods[j] = extraMethods[j];
+        }
+
+        return environment(
+            newMethods,
+            extend(properties, extraProperties)
+        );
+    };
+
+    self.envAppend = function(e) {
+        return e.envConcat(methods, properties);
+    };
+
+    for(var i in methods) {
+<span class="apidocCodeCommentSpan">        /* Make sure the methods are names */
+</span>        method = makeMethod(i, methods[i]);
+        method._name = i;
+        self[i] = method;
+    }
+
+    for(var j in properties) {
+        if(self[j]) throw new Error("Property `" + j + "` is already in environment.");
+        else self[j] = properties[j];
+    }
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+polymorphism, but only allows a single implementation at a time, via
+prototype mutation.
+
+A method instance is a product of a name, a predicate and an
+implementation:
+
+```javascript
+var env = fantasy.<span class="apidocCodeKeywordSpan">environment</span>()
+    .method(
+        // Name
+        'negate',
+        // Predicate
+        function(n) {
+            return typeof n == 'number';
+        },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.extend" id="apidoc.element.fantasy-world.extend">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>extend
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(a, b) {
+    var rec = function(a, b) {
+        var i;
+        for(i in b) {
+            a[i] = b[i];
+        }
+        return a;
+    };
+    return rec(rec({}, a), b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.fix" id="apidoc.element.fantasy-world.fix">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>fix
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fix(f) {
+    function g(h) {
+        return function(x) {
+            return f(h(h))(x);
+        };
+    };
+    return g(g);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.flip" id="apidoc.element.fantasy-world.flip">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>flip
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flip(f) {
+    return function(a) {
+        return function(b) {
+            return f(b)(a);
+        };
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.functionLength" id="apidoc.element.fantasy-world.functionLength">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>functionLength
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function functionLength(f) {
+    return f._length || f.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.functionName" id="apidoc.element.fantasy-world.functionName">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>functionName
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function functionName(f) {
+    return f._name || f.name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.getInstance" id="apidoc.element.fantasy-world.getInstance">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>getInstance
+        <span class="apidocSignatureSpan">(self, constructor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getInstance(self, constructor) {
+    return self instanceof constructor ? self : create(constructor.prototype);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.identity" id="apidoc.element.fantasy-world.identity">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>identity
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(a) {
+    return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isArray" id="apidoc.element.fantasy-world.isArray">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isArray
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray(a) {
+    if(Array.isArray) return Array.isArray(a);
+    else return {}.toString.call(a) === "[object Array]";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isBoolean" id="apidoc.element.fantasy-world.isBoolean">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isBoolean
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBoolean = function (b) {
+    return typeof b === a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isFunction" id="apidoc.element.fantasy-world.isFunction">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isFunction
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFunction = function (b) {
+    return typeof b === a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isInstanceOf" id="apidoc.element.fantasy-world.isInstanceOf">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isInstanceOf
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInstanceOf = function (a) {
+    return function(b) {
+        return b instanceof a;
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isNumber" id="apidoc.element.fantasy-world.isNumber">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isNumber
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNumber = function (b) {
+    return typeof b === a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isObject" id="apidoc.element.fantasy-world.isObject">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isObject
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isObject = function (b) {
+    return typeof b === a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isString" id="apidoc.element.fantasy-world.isString">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isString
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isString = function (b) {
+    return typeof b === a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.isTypeOf" id="apidoc.element.fantasy-world.isTypeOf">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>isTypeOf
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTypeOf = function (a, b) {
+    return function(b) {
+        return typeof b === a;
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.method" id="apidoc.element.fantasy-world.method">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>method
+        <span class="apidocSignatureSpan">(name, predicate, f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">method = function (name, predicate, f) {
+    if(properties[name]) throw new Error("Method `" + name + "` is already in environment.");
+
+    var newMethods = extend(methods, singleton(name, (methods[name] || []).concat({
+        predicate: predicate,
+        f: f
+    })));
+    return environment(newMethods, properties);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+prototype mutation.
+
+A method instance is a product of a name, a predicate and an
+implementation:
+
+```javascript
+var env = fantasy.environment()
+    .<span class="apidocCodeKeywordSpan">method</span>(
+        // Name
+        'negate',
+        // Predicate
+        function(n) {
+            return typeof n == 'number';
+        },
+        // Implementation
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.oneOf" id="apidoc.element.fantasy-world.oneOf">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>oneOf
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function oneOf(a) {
+    return a[Math.floor(this.randomRange(0, a.length))];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.property" id="apidoc.element.fantasy-world.property">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>property
+        <span class="apidocSignatureSpan">(name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">property = function (name, value) {
+    var newProperties = extend(properties, singleton(name, value));
+    return environment(methods, newProperties);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Properties can be accessed without dispatching on arguments. They
+can almost be thought of as methods with predicates that always
+return true:
+
+```javascript
+   var env = fantasy.environment()
+       .<span class="apidocCodeKeywordSpan">property</span>('name', 'Fantasy');
+
+   env.name === 'Fantasy';
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.randomRange" id="apidoc.element.fantasy-world.randomRange">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>randomRange
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomRange(a, b) {
+    return Math.random() * (b - a) + a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.singleton" id="apidoc.element.fantasy-world.singleton">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>singleton
+        <span class="apidocSignatureSpan">(k, v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function singleton(k, v) {
+    var o = {};
+    o[k] = v;
+    return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.strictEquals" id="apidoc.element.fantasy-world.strictEquals">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>strictEquals
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strictEquals(a) {
+    return function(b) {
+        return a === b;
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.substitution" id="apidoc.element.fantasy-world.substitution">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>substitution
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function substitution(f) {
+    return function(g) {
+        return function(x) {
+            f(x)(g(x));
+        };
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.tagged" id="apidoc.element.fantasy-world.tagged">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>tagged
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tagged() {
+    var fields = [].slice.apply(arguments);
+    function wrapped() {
+        var self = getInstance(this, wrapped),
+            i;
+
+        if(arguments.length != fields.length)
+            throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+        for(i = 0; i &lt; fields.length; i++)
+            self[fields[i]] = arguments[i];
+
+        return self;
+    }
+    wrapped._length = fields.length;
+    return wrapped;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.taggedSum" id="apidoc.element.fantasy-world.taggedSum">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>taggedSum
+        <span class="apidocSignatureSpan">(constructors)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function taggedSum(constructors) {
+    var key;
+
+    function definitions() {
+        throw new TypeError('Tagged sum was called instead of one of its properties.');
+    }
+
+    function makeCata(key) {
+        return function(dispatches) {
+            var fields = constructors[key],
+                args = [],
+                i;
+
+            if(!dispatches[key])
+                throw new TypeError("Constructors given to cata didn't include: " + key);
+
+            for(i = 0; i &lt; fields.length; i++)
+                args.push(this[fields[i]]);
+
+            return dispatches[key].apply(this, args);
+        };
+    }
+
+    function makeProto(key) {
+        var proto = create(definitions.prototype);
+        proto.cata = makeCata(key);
+        return proto;
+    }
+
+    for(key in constructors) {
+        if(!constructors[key].length) {
+            definitions[key] = makeProto(key);
+            continue;
+        }
+        definitions[key] = tagged.apply(null, constructors[key]);
+        definitions[key].prototype = makeProto(key);
+    }
+
+    return definitions;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.thrush" id="apidoc.element.fantasy-world.thrush">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>thrush
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function thrush(x) {
+    return function(f) {
+        return f(x);
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Cofree" id="apidoc.module.fantasy-world.Cofree">module fantasy-world.Cofree</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Cofree.Cofree" id="apidoc.element.fantasy-world.Cofree.Cofree">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Cofree
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Cofree.prototype" id="apidoc.module.fantasy-world.Cofree.prototype">module fantasy-world.Cofree.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Cofree.prototype.extend" id="apidoc.element.fantasy-world.Cofree.prototype.extend">
+        function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>extend
+        <span class="apidocSignatureSpan">(g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (g) {
+    return Cofree(g(this), this.f.map(function(c) {
+        return c.extend(g);
+    }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Cofree.prototype.extract" id="apidoc.element.fantasy-world.Cofree.prototype.extract">
+        function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>extract
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function () {
+    return this.a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Cofree.prototype.map" id="apidoc.element.fantasy-world.Cofree.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>map
+        <span class="apidocSignatureSpan">(g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (g) {
+    return Cofree(g(this.a), this.f.map(function(cf) {
+        return cf.map(g);
+    }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Cofree.prototype.traverse" id="apidoc.element.fantasy-world.Cofree.prototype.traverse">
+        function <span class="apidocSignatureSpan">fantasy-world.Cofree.prototype.</span>traverse
+        <span class="apidocSignatureSpan">(g, p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traverse = function (g, p) {
+    function go(h) {
+        return g(h.a).map(function(x) {
+            return function(i) {
+                return Cofree(x, i);
+            };
+        }).ap(h.f.traverse(go, p));
+    }
+    return go(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Either" id="apidoc.module.fantasy-world.Either">module fantasy-world.Either</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Either" id="apidoc.element.fantasy-world.Either.Either">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Either
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definitions() {
+    throw new TypeError('Tagged sum was called instead of one of its properties.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.EitherT" id="apidoc.element.fantasy-world.Either.EitherT">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.</span>EitherT
+        <span class="apidocSignatureSpan">(M)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">EitherT = function (M) {
+    var EitherT = daggy.tagged('run');
+
+    EitherT.prototype.fold = function(f, g) {
+        return this.run.chain(function(o) {
+            return M.of(o.fold(f, g));
+        });
+    };
+    EitherT.of = function(x) {
+        return EitherT(M.of(Either.Right(x)));
+    };
+    EitherT.prototype.swap = function() {
+        return this.fold(
+            function(l) {
+                return Either.Right(l);
+            },
+            function(r) {
+                return Either.Left(r);
+            }
+        );
+    };
+    EitherT.prototype.bimap = function(f, g) {
+        return this.fold(
+            function(l) {
+                return Either.Left(f(l));
+            },
+            function(r) {
+                return Either.Right(g(r));
+            }
+        );
+    };
+    EitherT.prototype.chain = function(f) {
+        var m = this.run;
+        return EitherT(m.chain(function(o) {
+            return o.fold(
+                function(a) {
+                    return M.of(Either.Left(a));
+                },
+                function(a) {
+                    return f(a).run;
+                }
+            );
+        }));
+    };
+    EitherT.prototype.map = function(f) {
+        return this.chain(function(a) {
+            return EitherT.of(f(a));
+        });
+    };
+    EitherT.prototype.ap = function(a) {
+        return this.chain(function(f) {
+            return a.map(f);
+        });
+    };
+    return EitherT;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Left" id="apidoc.element.fantasy-world.Either.Left">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Left
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Right" id="apidoc.element.fantasy-world.Either.Right">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Right
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.of" id="apidoc.element.fantasy-world.Either.of">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.</span>of
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Either.Left" id="apidoc.module.fantasy-world.Either.Left">module fantasy-world.Either.Left</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Left.Left" id="apidoc.element.fantasy-world.Either.Left.Left">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Left
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Either.Left.prototype" id="apidoc.module.fantasy-world.Either.Left.prototype">module fantasy-world.Either.Left.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Left.prototype.cata" id="apidoc.element.fantasy-world.Either.Left.prototype.cata">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.Left.prototype.</span>cata
+        <span class="apidocSignatureSpan">(dispatches)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cata = function (dispatches) {
+    var fields = constructors[key],
+        args = [],
+        i;
+
+    if(!dispatches[key])
+        throw new TypeError("Constructors given to cata didn't include: " + key);
+
+    for(i = 0; i &lt; fields.length; i++)
+        args.push(this[fields[i]]);
+
+    return dispatches[key].apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Either.Right" id="apidoc.module.fantasy-world.Either.Right">module fantasy-world.Either.Right</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Right.Right" id="apidoc.element.fantasy-world.Either.Right.Right">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.</span>Right
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Either.Right.prototype" id="apidoc.module.fantasy-world.Either.Right.prototype">module fantasy-world.Either.Right.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.Right.prototype.cata" id="apidoc.element.fantasy-world.Either.Right.prototype.cata">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.Right.prototype.</span>cata
+        <span class="apidocSignatureSpan">(dispatches)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cata = function (dispatches) {
+    var fields = constructors[key],
+        args = [],
+        i;
+
+    if(!dispatches[key])
+        throw new TypeError("Constructors given to cata didn't include: " + key);
+
+    for(i = 0; i &lt; fields.length; i++)
+        args.push(this[fields[i]]);
+
+    return dispatches[key].apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Either.prototype" id="apidoc.module.fantasy-world.Either.prototype">module fantasy-world.Either.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.ap" id="apidoc.element.fantasy-world.Either.prototype.ap">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>ap
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ap = function (a) {
+    return this.chain(function(f) {
+        return a.map(f);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.bimap" id="apidoc.element.fantasy-world.Either.prototype.bimap">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>bimap
+        <span class="apidocSignatureSpan">(f, g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bimap = function (f, g) {
+    return this.fold(
+        function(l) {
+            return Either.Left(f(l));
+        },
+        function(r) {
+            return Either.Right(g(r));
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.chain" id="apidoc.element.fantasy-world.Either.prototype.chain">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>chain
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function (f) {
+    return this.fold(
+        function(l) {
+            return Either.Left(l);
+        },
+        f
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.concat" id="apidoc.element.fantasy-world.Either.prototype.concat">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>concat
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (b) {
+    return this.fold(
+        function(l) {
+            return Either.Left(l);
+        },
+        function(r) {
+            return b.chain(function(t) {
+                return Either.Right(r.concat(t));
+            });
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.fold" id="apidoc.element.fantasy-world.Either.prototype.fold">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>fold
+        <span class="apidocSignatureSpan">(f, g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fold = function (f, g) {
+    return this.cata({
+        Left: f,
+        Right: g
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.map" id="apidoc.element.fantasy-world.Either.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    return this.chain(function(a) {
+        return Either.of(f(a));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.sequence" id="apidoc.element.fantasy-world.Either.prototype.sequence">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>sequence
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sequence = function (p) {
+    return this.traverse(identity, p);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.swap" id="apidoc.element.fantasy-world.Either.prototype.swap">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>swap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">swap = function () {
+    return this.fold(
+        function(l) {
+            return Either.Right(l);
+        },
+        function(r) {
+            return Either.Left(r);
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Either.prototype.traverse" id="apidoc.element.fantasy-world.Either.prototype.traverse">
+        function <span class="apidocSignatureSpan">fantasy-world.Either.prototype.</span>traverse
+        <span class="apidocSignatureSpan">(f, p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traverse = function (f, p) {
+    return this.cata({
+        Left: function(l) {
+            return p.of(Either.Left(l));
+        },
+        Right: function(r) {
+            return f(r).map(Either.Right);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.IO" id="apidoc.module.fantasy-world.IO">module fantasy-world.IO</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.IO.IO" id="apidoc.element.fantasy-world.IO.IO">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>IO
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.IO.of" id="apidoc.element.fantasy-world.IO.of">
+        function <span class="apidocSignatureSpan">fantasy-world.IO.</span>of
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">of = function (x) {
+    return IO(function() {
+        return x;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.IO.prototype" id="apidoc.module.fantasy-world.IO.prototype">module fantasy-world.IO.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.IO.prototype.ap" id="apidoc.element.fantasy-world.IO.prototype.ap">
+        function <span class="apidocSignatureSpan">fantasy-world.IO.prototype.</span>ap
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ap = function (a) {
+    return this.chain(function(f) {
+        return a.map(f);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.IO.prototype.chain" id="apidoc.element.fantasy-world.IO.prototype.chain">
+        function <span class="apidocSignatureSpan">fantasy-world.IO.prototype.</span>chain
+        <span class="apidocSignatureSpan">(g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function (g) {
+    var io = this;
+    return IO(function() {
+        return g(io.unsafePerform()).unsafePerform();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.IO.prototype.map" id="apidoc.element.fantasy-world.IO.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.IO.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    return this.chain(function(a) {
+        return IO.of(f(a));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Identity" id="apidoc.module.fantasy-world.Identity">module fantasy-world.Identity</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Identity.Identity" id="apidoc.element.fantasy-world.Identity.Identity">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Identity
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Identity.of" id="apidoc.element.fantasy-world.Identity.of">
+        function <span class="apidocSignatureSpan">fantasy-world.Identity.</span>of
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Identity.prototype" id="apidoc.module.fantasy-world.Identity.prototype">module fantasy-world.Identity.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Identity.prototype.ap" id="apidoc.element.fantasy-world.Identity.prototype.ap">
+        function <span class="apidocSignatureSpan">fantasy-world.Identity.prototype.</span>ap
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ap = function (a) {
+    return this.chain(function(f) {
+        return a.map(f);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Identity.prototype.chain" id="apidoc.element.fantasy-world.Identity.prototype.chain">
+        function <span class="apidocSignatureSpan">fantasy-world.Identity.prototype.</span>chain
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function (f) {
+    return f(this.x);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Identity.prototype.map" id="apidoc.element.fantasy-world.Identity.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Identity.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    return this.chain(function(a) {
+        return Identity.of(f(a));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Lens" id="apidoc.module.fantasy-world.Lens">module fantasy-world.Lens</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens.Lens" id="apidoc.element.fantasy-world.Lens.Lens">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Lens
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens.arrayLens" id="apidoc.element.fantasy-world.Lens.arrayLens">
+        function <span class="apidocSignatureSpan">fantasy-world.Lens.</span>arrayLens
+        <span class="apidocSignatureSpan">(index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayLens = function (index) {
+    return Lens(function(a) {
+        return Store(
+            function(s) {
+                var r = a.concat();
+                r[index] = s;
+                return r;
+            },
+            function() {
+                return a[index];
+            }
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens.id" id="apidoc.element.fantasy-world.Lens.id">
+        function <span class="apidocSignatureSpan">fantasy-world.Lens.</span>id
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">id = function () {
+    return Lens(function(target) {
+        return Store(
+            identity,
+            function() {
+                return target;
+            }
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens.objectLens" id="apidoc.element.fantasy-world.Lens.objectLens">
+        function <span class="apidocSignatureSpan">fantasy-world.Lens.</span>objectLens
+        <span class="apidocSignatureSpan">(property)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">objectLens = function (property) {
+    return Lens(function(o) {
+        return Store(
+            function(s) {
+                var r = {},
+                    k;
+                for(k in o) {
+                    r[k] = o[k];
+                }
+                r[property] = s;
+                return r;
+            },
+            function() {
+                return o[property];
+            }
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Lens.prototype" id="apidoc.module.fantasy-world.Lens.prototype">module fantasy-world.Lens.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens.prototype.andThen" id="apidoc.element.fantasy-world.Lens.prototype.andThen">
+        function <span class="apidocSignatureSpan">fantasy-world.Lens.prototype.</span>andThen
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function thisAndThen(b) {
+    return b.compose(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens.prototype.compose" id="apidoc.element.fantasy-world.Lens.prototype.compose">
+        function <span class="apidocSignatureSpan">fantasy-world.Lens.prototype.</span>compose
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compose = function (b) {
+    var a = this;
+    return Lens(function(target) {
+        var c = b.run(target),
+            d = a.run(c.getter());
+        return Store(
+            compose(c.setter, d.setter),
+            d.getter
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Lens.prototype.toPartial" id="apidoc.element.fantasy-world.Lens.prototype.toPartial">
+        function <span class="apidocSignatureSpan">fantasy-world.Lens.prototype.</span>toPartial
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toPartial = function () {
+    var self = this;
+    return PartialLens(function(target) {
+        return Option.Some(self.run(target));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Option" id="apidoc.module.fantasy-world.Option">module fantasy-world.Option</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.Option" id="apidoc.element.fantasy-world.Option.Option">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Option
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definitions() {
+    throw new TypeError('Tagged sum was called instead of one of its properties.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.Some" id="apidoc.element.fantasy-world.Option.Some">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.</span>Some
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.of" id="apidoc.element.fantasy-world.Option.of">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.</span>of
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Option.None" id="apidoc.module.fantasy-world.Option.None">module fantasy-world.Option.None</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.None.cata" id="apidoc.element.fantasy-world.Option.None.cata">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.None.</span>cata
+        <span class="apidocSignatureSpan">(dispatches)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cata = function (dispatches) {
+    var fields = constructors[key],
+        args = [],
+        i;
+
+    if(!dispatches[key])
+        throw new TypeError("Constructors given to cata didn't include: " + key);
+
+    for(i = 0; i &lt; fields.length; i++)
+        args.push(this[fields[i]]);
+
+    return dispatches[key].apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Option.Some" id="apidoc.module.fantasy-world.Option.Some">module fantasy-world.Option.Some</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.Some.Some" id="apidoc.element.fantasy-world.Option.Some.Some">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.</span>Some
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Option.Some.prototype" id="apidoc.module.fantasy-world.Option.Some.prototype">module fantasy-world.Option.Some.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.Some.prototype.cata" id="apidoc.element.fantasy-world.Option.Some.prototype.cata">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.Some.prototype.</span>cata
+        <span class="apidocSignatureSpan">(dispatches)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cata = function (dispatches) {
+    var fields = constructors[key],
+        args = [],
+        i;
+
+    if(!dispatches[key])
+        throw new TypeError("Constructors given to cata didn't include: " + key);
+
+    for(i = 0; i &lt; fields.length; i++)
+        args.push(this[fields[i]]);
+
+    return dispatches[key].apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Option.prototype" id="apidoc.module.fantasy-world.Option.prototype">module fantasy-world.Option.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.prototype.ap" id="apidoc.element.fantasy-world.Option.prototype.ap">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>ap
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ap = function (a) {
+    return this.chain(function(f) {
+        return a.map(f);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.prototype.chain" id="apidoc.element.fantasy-world.Option.prototype.chain">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>chain
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function (f) {
+    return this.fold(
+        function(a) {
+            return f(a);
+        },
+        function() {
+            return Option.None;
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.prototype.concat" id="apidoc.element.fantasy-world.Option.prototype.concat">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>concat
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (x) {
+    return this.fold(
+        function(a) {
+            return x.chain(function(b) {
+                return Option.Some(a.concat(b));
+            });
+        },
+        function() {
+            return b;
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.prototype.fold" id="apidoc.element.fantasy-world.Option.prototype.fold">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>fold
+        <span class="apidocSignatureSpan">(f, g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fold = function (f, g) {
+    return this.cata({
+        Some: f,
+        None: g
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.prototype.getOrElse" id="apidoc.element.fantasy-world.Option.prototype.getOrElse">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>getOrElse
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOrElse = function (x) {
+    return this.fold(
+        function(a) {
+            return a;
+        },
+        function() {
+            return x;
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.prototype.map" id="apidoc.element.fantasy-world.Option.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    return this.chain(function(a) {
+        return Option.of(f(a));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Option.prototype.orElse" id="apidoc.element.fantasy-world.Option.prototype.orElse">
+        function <span class="apidocSignatureSpan">fantasy-world.Option.prototype.</span>orElse
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">orElse = function (x) {
+    return this.fold(
+        function(x) {
+            return Option.Some(x);
+        },
+        function() {
+            return x;
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.PartialLens" id="apidoc.module.fantasy-world.PartialLens">module fantasy-world.PartialLens</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.PartialLens.PartialLens" id="apidoc.element.fantasy-world.PartialLens.PartialLens">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>PartialLens
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.PartialLens.arrayLens" id="apidoc.element.fantasy-world.PartialLens.arrayLens">
+        function <span class="apidocSignatureSpan">fantasy-world.PartialLens.</span>arrayLens
+        <span class="apidocSignatureSpan">(index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayLens = function (index) {
+    var totalLens = Lens.arrayLens(index);
+    return PartialLens(function(target) {
+        return index &gt; 0 &amp;&amp; index &lt; target.length ? Option.Some(totalLens.run(target)) : Option.None;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.PartialLens.id" id="apidoc.element.fantasy-world.PartialLens.id">
+        function <span class="apidocSignatureSpan">fantasy-world.PartialLens.</span>id
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">id = function () {
+    return PartialLens(function(target) {
+        return Option.Some(Lens.id().run(target));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.PartialLens.objectLens" id="apidoc.element.fantasy-world.PartialLens.objectLens">
+        function <span class="apidocSignatureSpan">fantasy-world.PartialLens.</span>objectLens
+        <span class="apidocSignatureSpan">(property)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">objectLens = function (property) {
+    var totalLens = Lens.objectLens(property);
+    return PartialLens(function(target) {
+        return property in target ? Option.Some(totalLens.run(target)) : Option.None;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.PartialLens.prototype" id="apidoc.module.fantasy-world.PartialLens.prototype">module fantasy-world.PartialLens.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.PartialLens.prototype.andThen" id="apidoc.element.fantasy-world.PartialLens.prototype.andThen">
+        function <span class="apidocSignatureSpan">fantasy-world.PartialLens.prototype.</span>andThen
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function thisAndThen(b) {
+    return b.compose(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.PartialLens.prototype.compose" id="apidoc.element.fantasy-world.PartialLens.prototype.compose">
+        function <span class="apidocSignatureSpan">fantasy-world.PartialLens.prototype.</span>compose
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compose = function (b) {
+    var a = this;
+    return PartialLens(function(target) {
+        return b.run(target).chain(function(c) {
+            return a.run(c.getter()).map(function(d) {
+                return Store(
+                    compose(c.setter, d.setter),
+                    d.getter
+                );
+            });
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Promise" id="apidoc.module.fantasy-world.Promise">module fantasy-world.Promise</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Promise.Promise" id="apidoc.element.fantasy-world.Promise.Promise">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Promise
+        <span class="apidocSignatureSpan">(fork)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(fork) {
+    this.fork = fork;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Promise.of" id="apidoc.element.fantasy-world.Promise.of">
+        function <span class="apidocSignatureSpan">fantasy-world.Promise.</span>of
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">of = function (x) {
+    return new Promise(function(resolve) {
+        return resolve(x);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Promise.prototype" id="apidoc.module.fantasy-world.Promise.prototype">module fantasy-world.Promise.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Promise.prototype.chain" id="apidoc.element.fantasy-world.Promise.prototype.chain">
+        function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>chain
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function (f) {
+    var promise = this;
+    return new Promise(function(resolve) {
+        return promise.fork(function(a) {
+            return f(a).fork(resolve);
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Promise.prototype.extend" id="apidoc.element.fantasy-world.Promise.prototype.extend">
+        function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>extend
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (f) {
+    var promise = this;
+    return promise.map(function(a) {
+        return f(Promise.of(a));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Promise.prototype.extract" id="apidoc.element.fantasy-world.Promise.prototype.extract">
+        function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>extract
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function () {
+    return this.fork(function(data) {
+        return data;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Promise.prototype.map" id="apidoc.element.fantasy-world.Promise.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Promise.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    var promise = this;
+    return new Promise(function(resolve) {
+        return promise.fork(function(a) {
+            return resolve(f(a));
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Reader" id="apidoc.module.fantasy-world.Reader">module fantasy-world.Reader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader.Reader" id="apidoc.element.fantasy-world.Reader.Reader">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Reader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader.ReaderT" id="apidoc.element.fantasy-world.Reader.ReaderT">
+        function <span class="apidocSignatureSpan">fantasy-world.Reader.</span>ReaderT
+        <span class="apidocSignatureSpan">(M)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ReaderT = function (M) {
+    var ReaderT = daggy.tagged('run');
+    ReaderT.lift = function(m) {
+        return ReaderT(function(b) {
+            return m;
+        });
+    };
+    ReaderT.of = function(a) {
+        return ReaderT(function(e) {
+            return M.of(a);
+        });
+    };
+    ReaderT.prototype.chain = function(f) {
+        var reader = this;
+        return ReaderT(function(e) {
+            return reader.run(e).chain(function(a) {
+                return f(a).run(e);
+            });
+        });
+    };
+    ReaderT.ask = ReaderT(function(e) {
+        return M.of(e);
+    });
+    return ReaderT;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader.of" id="apidoc.element.fantasy-world.Reader.of">
+        function <span class="apidocSignatureSpan">fantasy-world.Reader.</span>of
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">of = function (a) {
+    return Reader(function(e) {
+        return a;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Reader.ask" id="apidoc.module.fantasy-world.Reader.ask">module fantasy-world.Reader.ask</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader.ask.run" id="apidoc.element.fantasy-world.Reader.ask.run">
+        function <span class="apidocSignatureSpan">fantasy-world.Reader.ask.</span>run
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (e) {
+    return e;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Reader.prototype" id="apidoc.module.fantasy-world.Reader.prototype">module fantasy-world.Reader.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader.prototype.ap" id="apidoc.element.fantasy-world.Reader.prototype.ap">
+        function <span class="apidocSignatureSpan">fantasy-world.Reader.prototype.</span>ap
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ap = function (a) {
+    return this.chain(function(f) {
+        return a.map(f);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader.prototype.chain" id="apidoc.element.fantasy-world.Reader.prototype.chain">
+        function <span class="apidocSignatureSpan">fantasy-world.Reader.prototype.</span>chain
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function (f) {
+    var reader = this;
+    return Reader(function(e) {
+        return f(reader.run(e)).run(e);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Reader.prototype.map" id="apidoc.element.fantasy-world.Reader.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Reader.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    return this.chain(function(a) {
+        return Reader.of(f(a));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.State" id="apidoc.module.fantasy-world.State">module fantasy-world.State</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.State" id="apidoc.element.fantasy-world.State.State">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>State
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.StateT" id="apidoc.element.fantasy-world.State.StateT">
+        function <span class="apidocSignatureSpan">fantasy-world.State.</span>StateT
+        <span class="apidocSignatureSpan">(M)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">StateT = function (M) {
+    var StateT = daggy.tagged('run');
+    StateT.lift = function(m) {
+        return StateT(function(b) {
+            return m.map(function(c) {
+                return Tuple2(c, b);
+            });
+        });
+    };
+    StateT.of = function(a) {
+        return StateT(function(b) {
+            return M.of(Tuple2(a, b));
+        });
+    };
+    StateT.prototype.chain = function(f) {
+        var state = this;
+        return StateT(function(s) {
+            var result = state.run(s);
+            return result.chain(function(t) {
+                return f(t._1).run(t._2);
+            });
+        });
+    };
+    StateT.get = StateT(function(s) {
+        return M.of(Tuple2(s, s));
+    });
+    StateT.modify = function(f) {
+        return StateT(function(s) {
+            return M.of(Tuple2(null, f(s)));
+        });
+    };
+    StateT.put = function(s) {
+        return StateT.modify(function(a) {
+            return s;
+        });
+    };
+    StateT.prototype.evalState = function(s) {
+        return this.run(s).map(function(t) {
+            return t._1;
+        });
+    };
+    StateT.prototype.exec = function(s) {
+        return this.run(s).map(function(t) {
+            return t._2;
+        });
+    };
+    StateT.prototype.map = function(f) {
+        return this.chain(function(a) {
+            return StateT.of(f(a));
+        });
+    };
+    StateT.prototype.ap = function(a) {
+        return this.chain(function(f) {
+            return a.map(f);
+        });
+    };
+    return StateT;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.modify" id="apidoc.element.fantasy-world.State.modify">
+        function <span class="apidocSignatureSpan">fantasy-world.State.</span>modify
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modify = function (f) {
+    return State(function(s) {
+        return Tuple2(null, f(s));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.of" id="apidoc.element.fantasy-world.State.of">
+        function <span class="apidocSignatureSpan">fantasy-world.State.</span>of
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">of = function (a) {
+    return State(function(b) {
+        return Tuple2(a, b);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.put" id="apidoc.element.fantasy-world.State.put">
+        function <span class="apidocSignatureSpan">fantasy-world.State.</span>put
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (s) {
+    return State.modify(function(a) {
+        return s;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.State.get" id="apidoc.module.fantasy-world.State.get">module fantasy-world.State.get</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.get.run" id="apidoc.element.fantasy-world.State.get.run">
+        function <span class="apidocSignatureSpan">fantasy-world.State.get.</span>run
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (s) {
+    return Tuple2(s, s);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.State.prototype" id="apidoc.module.fantasy-world.State.prototype">module fantasy-world.State.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.prototype.ap" id="apidoc.element.fantasy-world.State.prototype.ap">
+        function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>ap
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ap = function (a) {
+    return this.chain(function(f) {
+        return a.map(f);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.prototype.chain" id="apidoc.element.fantasy-world.State.prototype.chain">
+        function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>chain
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function (f) {
+    var state = this;
+    return State(function(s) {
+        var result = state.run(s);
+        return f(result._1).run(result._2);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.prototype.evalState" id="apidoc.element.fantasy-world.State.prototype.evalState">
+        function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>evalState
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">evalState = function (s) {
+    return this.run(s)._1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.prototype.exec" id="apidoc.element.fantasy-world.State.prototype.exec">
+        function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>exec
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (s) {
+    return this.run(s)._2;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.State.prototype.map" id="apidoc.element.fantasy-world.State.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.State.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    return this.chain(function(a) {
+        return State.of(f(a));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Store" id="apidoc.module.fantasy-world.Store">module fantasy-world.Store</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Store.Store" id="apidoc.element.fantasy-world.Store.Store">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Store
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Store.prototype" id="apidoc.module.fantasy-world.Store.prototype">module fantasy-world.Store.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Store.prototype.extend" id="apidoc.element.fantasy-world.Store.prototype.extend">
+        function <span class="apidocSignatureSpan">fantasy-world.Store.prototype.</span>extend
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (f) {
+    var self = this;
+    return Store(
+        function(k) {
+            return f(Store(
+                self.setter,
+                function() {
+                    return k;
+                }
+            ));
+        },
+        this.getter
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Store.prototype.extract" id="apidoc.element.fantasy-world.Store.prototype.extract">
+        function <span class="apidocSignatureSpan">fantasy-world.Store.prototype.</span>extract
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function () {
+    return this.setter(this.getter());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Store.prototype.map" id="apidoc.element.fantasy-world.Store.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Store.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    var self = this;
+    return this.extend(function(c) {
+        return f(c.extract());
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple2" id="apidoc.module.fantasy-world.Tuple2">module fantasy-world.Tuple2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple2.Tuple2" id="apidoc.element.fantasy-world.Tuple2.Tuple2">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple2
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple2.prototype" id="apidoc.module.fantasy-world.Tuple2.prototype">module fantasy-world.Tuple2.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple2.prototype.concat" id="apidoc.element.fantasy-world.Tuple2.prototype.concat">
+        function <span class="apidocSignatureSpan">fantasy-world.Tuple2.prototype.</span>concat
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (b) {
+    return Tuple2(
+        this._1.concat(b._1),
+        this._2.concat(b._2)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple3" id="apidoc.module.fantasy-world.Tuple3">module fantasy-world.Tuple3</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple3.Tuple3" id="apidoc.element.fantasy-world.Tuple3.Tuple3">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple3.prototype" id="apidoc.module.fantasy-world.Tuple3.prototype">module fantasy-world.Tuple3.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple3.prototype.concat" id="apidoc.element.fantasy-world.Tuple3.prototype.concat">
+        function <span class="apidocSignatureSpan">fantasy-world.Tuple3.prototype.</span>concat
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (b) {
+    return Tuple3(
+        this._1.concat(b._1),
+        this._2.concat(b._2),
+        this._3.concat(b._3)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple4" id="apidoc.module.fantasy-world.Tuple4">module fantasy-world.Tuple4</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple4.Tuple4" id="apidoc.element.fantasy-world.Tuple4.Tuple4">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple4.prototype" id="apidoc.module.fantasy-world.Tuple4.prototype">module fantasy-world.Tuple4.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple4.prototype.concat" id="apidoc.element.fantasy-world.Tuple4.prototype.concat">
+        function <span class="apidocSignatureSpan">fantasy-world.Tuple4.prototype.</span>concat
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (b) {
+    return Tuple4(
+        this._1.concat(b._1),
+        this._2.concat(b._2),
+        this._3.concat(b._3),
+        this._4.concat(b._4)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple5" id="apidoc.module.fantasy-world.Tuple5">module fantasy-world.Tuple5</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple5.Tuple5" id="apidoc.element.fantasy-world.Tuple5.Tuple5">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Tuple5
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Tuple5.prototype" id="apidoc.module.fantasy-world.Tuple5.prototype">module fantasy-world.Tuple5.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Tuple5.prototype.concat" id="apidoc.element.fantasy-world.Tuple5.prototype.concat">
+        function <span class="apidocSignatureSpan">fantasy-world.Tuple5.prototype.</span>concat
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (b) {
+    return Tuple5(
+        this._1.concat(b._1),
+        this._2.concat(b._2),
+        this._3.concat(b._3),
+        this._4.concat(b._4),
+        this._5.concat(b._5)
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Validation" id="apidoc.module.fantasy-world.Validation">module fantasy-world.Validation</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Validation" id="apidoc.element.fantasy-world.Validation.Validation">
+        function <span class="apidocSignatureSpan">fantasy-world.</span>Validation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function definitions() {
+    throw new TypeError('Tagged sum was called instead of one of its properties.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Failure" id="apidoc.element.fantasy-world.Validation.Failure">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Failure
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Success" id="apidoc.element.fantasy-world.Validation.Success">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Success
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.of" id="apidoc.element.fantasy-world.Validation.of">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>of
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Validation.Failure" id="apidoc.module.fantasy-world.Validation.Failure">module fantasy-world.Validation.Failure</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Failure.Failure" id="apidoc.element.fantasy-world.Validation.Failure.Failure">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Failure
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Validation.Failure.prototype" id="apidoc.module.fantasy-world.Validation.Failure.prototype">module fantasy-world.Validation.Failure.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Failure.prototype.cata" id="apidoc.element.fantasy-world.Validation.Failure.prototype.cata">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.Failure.prototype.</span>cata
+        <span class="apidocSignatureSpan">(dispatches)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cata = function (dispatches) {
+    var fields = constructors[key],
+        args = [],
+        i;
+
+    if(!dispatches[key])
+        throw new TypeError("Constructors given to cata didn't include: " + key);
+
+    for(i = 0; i &lt; fields.length; i++)
+        args.push(this[fields[i]]);
+
+    return dispatches[key].apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Validation.Success" id="apidoc.module.fantasy-world.Validation.Success">module fantasy-world.Validation.Success</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Success.Success" id="apidoc.element.fantasy-world.Validation.Success.Success">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.</span>Success
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError('Expected ' + fields.length + ' arguments, got ' + arguments.length);
+
+    for(i = 0; i &lt; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Validation.Success.prototype" id="apidoc.module.fantasy-world.Validation.Success.prototype">module fantasy-world.Validation.Success.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.Success.prototype.cata" id="apidoc.element.fantasy-world.Validation.Success.prototype.cata">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.Success.prototype.</span>cata
+        <span class="apidocSignatureSpan">(dispatches)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cata = function (dispatches) {
+    var fields = constructors[key],
+        args = [],
+        i;
+
+    if(!dispatches[key])
+        throw new TypeError("Constructors given to cata didn't include: " + key);
+
+    for(i = 0; i &lt; fields.length; i++)
+        args.push(this[fields[i]]);
+
+    return dispatches[key].apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-world.Validation.prototype" id="apidoc.module.fantasy-world.Validation.prototype">module fantasy-world.Validation.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.prototype.ap" id="apidoc.element.fantasy-world.Validation.prototype.ap">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>ap
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ap = function (b) {
+    return this.fold(
+        function(f1) {
+            return b.fold(
+                function(f2) {
+                    return Validation.Failure(f1.concat(f2));
+                },
+                function(s) {
+                    return Validation.Failure(f1);
+                }
+            );
+        },
+        function(s) {
+            return b.map(s);
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.prototype.bimap" id="apidoc.element.fantasy-world.Validation.prototype.bimap">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>bimap
+        <span class="apidocSignatureSpan">(f, g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bimap = function (f, g) {
+    return this.fold(
+        function(a) {
+            return Validation.Failure(f(a));
+        },
+        function(b) {
+            return Validation.Success(g(b));
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.prototype.concat" id="apidoc.element.fantasy-world.Validation.prototype.concat">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>concat
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (b) {
+    return this.fold(
+        function(f) {
+            return b.bimap(
+                function(g) {
+                    return f.concat(g);
+                },
+                identity
+            );
+        },
+        function(s) {
+            return b.map(function(d) {
+                return s.concat(d);
+            });
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.prototype.fold" id="apidoc.element.fantasy-world.Validation.prototype.fold">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>fold
+        <span class="apidocSignatureSpan">(f, g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fold = function (f, g) {
+    return this.cata({
+        Failure: f,
+        Success: g
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-world.Validation.prototype.map" id="apidoc.element.fantasy-world.Validation.prototype.map">
+        function <span class="apidocSignatureSpan">fantasy-world.Validation.prototype.</span>map
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (f) {
+    return this.bimap(identity, f);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
